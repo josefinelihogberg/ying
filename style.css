@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background: #6d6875;
+}
+
+.start-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 2em;
+  color: #ffcdb2;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #f5ebe0;
+  margin: 0.5em auto;
+}
+
+input {
+  width: 100%;
+  line-height: 1.5em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background-color: #edede9;
+}
+
+input:focus {
+  background-color: #ffcdb2;
+}
+
+.game-start-btn,
+.game-restart-btn {
+  width: 100%;
+  line-height: 1.5em;
+  background-color: #e5989b;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  padding: 0.2em;
+}
+
+.game-restart-btn {
+  line-height: 1.5em;
+  background-color: #e5989b;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  padding: 0.2em;
+}
+
+a {
+  color: #f5ebe0;
+  text-decoration: none;
+}
+
+.memory-game {
+  display: none;
+  font-weight: 700;
+  color: #ffcdb2;
+}
+
+.score-display-container {
+  display: flex;
+  gap: 0.2em;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  color: #f5ebe0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 6rem);
+  grid-template-rows: repeat(4, 6rem);
+  gap: 1.5rem;
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 800ms linear;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 0.2em;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  pointer-events: none;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5ebe0;
+  backface-visibility: hidden;
+  text-align: center;
+  font-size: x-large;
+  color: #6d6875;
+}
+
+.selectedCard {
+  transform: rotateY(180deg);
+}
+
+.game-restart-btn {
+  visibility: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  width: 100px;
+}
+
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+  margin-top: 3em;
+  text-align: center;
+  color: #f5ebe0;
+}
